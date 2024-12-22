@@ -13,5 +13,6 @@
 8. Update the main.py
 9. Update the dvc.yaml
 
-## 3. Create ECR repo to store/save docker image
-    - Save the URI: 794038239683.dkr.ecr.us-east-2.amazonaws.com/chicken
+## How to run?
+### STEPS:
+https://github.com/entbappy/Chicken-Disease-Classification--Project
