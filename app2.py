@@ -8,13 +8,18 @@ import io
 # Must be the first Streamlit command
 st.set_page_config(page_title="Chicken Disease Classifier", layout="wide")
 
-# -------------------------------
-# 1. Caching / Resource Loading
-# -------------------------------
+def custom_categorical_crossentropy(*args, **kwargs):
+    kwargs.pop('fn', None)  # Remove the unexpected 'fn' parameter if it exists.
+    return CategoricalCrossentropy(*args, **kwargs)
+
 @st.cache_resource
 def load_model():
-    model_path = "artifacts/prepare_base_model/base_model_updated.h5"  # Adjust if needed
-    model = tf.keras.models.load_model(model_path)
+    model_path = "artifacts/prepare_base_model/base_model_updated.h5"
+    # Pass the custom loss function in custom_objects.
+    model = tf.keras.models.load_model(
+        model_path,
+        custom_objects={'CategoricalCrossentropy': custom_categorical_crossentropy}
+    )
     return model
 
 def predict_image(model, image_array, class_names):
