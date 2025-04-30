@@ -1,18 +1,55 @@
-# AZURE-CICD-Deployment-with-Github-Actions
+# 🐔 Chicken Disease Classifier
 
-## Save pass:
+A deep learning-based image classification system for identifying potential diseases in chickens, powered by a Convolutional Neural Network (CNN).  
+This app uses a Streamlit frontend, backed by Docker, AWS ECR, and GitHub Actions for end-to-end MLOps deployment.
 
-## Run from terminal:
+---
 
-docker build -t chickenapp.azurecr.io/chicken:latest .
+## 🚀 Features
 
-docker login chickenapp.azurecr.io
+- 📷 Upload a chicken image and classify it as **Healthy** or **Infected**
+- 🧠 Trained CNN model with TensorFlow
+- 📈 Visual confidence chart of prediction
+- 💻 Streamlit-powered UI with custom styling
+- 🐳 Dockerized deployment with GitHub Actions
+- ☁️ CI/CD pipeline deploying to **AWS ECR + ECS**
 
-docker push chickenapp.azurecr.io/chicken:latest
+---
 
-## Deployment Steps:
+## 🧰 Tech Stack
 
-1. Build the Docker image of the Source Code
-2. Push the Docker image to Container Registry
-3. Launch the Web App Server in Azure 
-4. Pull the Docker image from the container registry to the Web App server and run
+| Component | Tech |
+|:--|:--|
+| Model | CNN (TensorFlow / Keras) |
+| UI | Streamlit |
+| CI/CD | GitHub Actions |
+| Containerization | Docker |
+| Deployment | Amazon ECR (Elastic Container Registry) |
+| Infra | AWS ECS, IAM (through GitHub Secrets) |
+
+---
+
+## 📸 Demo
+
+<p align="center">
+  <img src="images/app_screenshot.png" width="600" alt="App Screenshot"/>
+</p>
+
+---
+
+## 🧪 How to Run Locally
+
+```bash
+# 1. Clone the repo
+git clone https://github.com/nishantsingh-ds/chicken-disease-classifier.git
+cd chicken-disease-classifier
+
+# 2. Create virtual environment
+python -m venv venv
+source venv/bin/activate  # or venv\Scripts\activate on Windows
+
+# 3. Install dependencies
+pip install -r requirements.txt
+
+# 4. Run Streamlit app
+streamlit run app.py
