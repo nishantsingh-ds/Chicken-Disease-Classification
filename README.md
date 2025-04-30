@@ -1,6 +1,6 @@
 # 🐔 Chicken Disease Classifier
 
-👉 ![Open in Streamlit](https://chicken-disease-classify.streamlit.app/)
+👉 [![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://chicken-disease-classify.streamlit.app/)
 
 A deep learning-based image classification system for identifying potential diseases in chickens, powered by a Convolutional Neural Network (CNN).  
 This app uses a Streamlit frontend, backed by Docker, AWS ECR, and GitHub Actions for end-to-end MLOps deployment.
