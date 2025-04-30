@@ -32,7 +32,7 @@ This app uses a Streamlit frontend, backed by Docker, AWS ECR, and GitHub Action
 ## 📸 Demo
 
 <p align="center">
-  <img src="images/app_screenshot.png" width="600" alt="App Screenshot"/>
+  <img src="assets/demo.png" width="600" alt="App Screenshot"/>
 </p>
 
 ---
